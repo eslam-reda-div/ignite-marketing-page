@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import PageHeader from "@/components/PageHeader";
 import Footer from "@/components/Footer";
@@ -13,7 +12,7 @@ const Careers = () => {
       location: 'San Francisco, CA',
       department: 'Marketing',
       type: 'Full-time',
-      description: 'We're looking for an experienced SEO specialist to develop and implement search strategies for our clients.',
+      description: 'We\'re looking for an experienced SEO specialist to develop and implement search strategies for our clients.',
     },
     {
       id: 2,

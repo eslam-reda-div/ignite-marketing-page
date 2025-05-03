@@ -64,7 +64,7 @@ const Blog = () => {
       id: 5,
       slug: 'analytics-mistakes',
       title: '5 Common Google Analytics Mistakes and How to Fix Them',
-      excerpt: 'Avoid these critical errors in your Google Analytics setup to ensure you're getting accurate data for making marketing decisions.',
+      excerpt: 'Avoid these critical errors in your Google Analytics setup to ensure you\'re getting accurate data for making marketing decisions.',
       category: 'Analytics',
       author: 'Jessica Chen',
       authorImage: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
