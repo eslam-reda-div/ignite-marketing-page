@@ -1,4 +1,4 @@
-# Ignite marketing page | the first try for lovable
+# Ignite marketing page
 
 https://ignite-marketing-page.vercel.app/
 
