@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from "@/lib/utils";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,12 +24,13 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Testimonials', href: '#testimonials' },
-    { name: 'Team', href: '#team' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Portfolio', href: '/portfolio' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -37,24 +39,24 @@ const Navbar = () => {
       scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'
     )}>
       <div className="container-custom flex items-center justify-between">
-        <a href="#home" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <span className="text-2xl font-bold font-heading text-agency-blue">IGNITE<span className="text-agency-orange">.</span></span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
-            <a 
+            <Link 
               key={link.name}
-              href={link.href}
+              to={link.href}
               className="text-agency-blue hover:text-agency-orange font-medium transition-colors"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
-          <a href="#contact" className="btn-primary">
+          <Link to="/contact" className="btn-primary">
             Get Started
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -71,22 +73,22 @@ const Navbar = () => {
         <div className="md:hidden bg-white shadow-lg absolute top-full left-0 right-0 border-t">
           <div className="container-custom py-4 flex flex-col space-y-4">
             {navLinks.map((link) => (
-              <a 
+              <Link 
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className="text-agency-blue hover:text-agency-orange font-medium transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
-            <a 
-              href="#contact" 
+            <Link 
+              to="/contact" 
               className="btn-primary w-full text-center"
               onClick={() => setIsMenuOpen(false)}
             >
               Get Started
-            </a>
+            </Link>
           </div>
         </div>
       )}

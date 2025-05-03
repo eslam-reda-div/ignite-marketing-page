@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
-const Contact = () => {
+export const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -36,13 +36,6 @@ const Contact = () => {
   return (
     <section id="contact" className="section-padding bg-agency-gray">
       <div className="container-custom">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-lg text-gray-700">
-            Ready to grow your business? Contact us today for a free consultation and personalized digital marketing strategy
-          </p>
-        </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
           <div className="lg:col-span-2 space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-md">

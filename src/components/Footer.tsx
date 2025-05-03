@@ -11,9 +11,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="mb-6">
-              <a href="#home" className="flex items-center">
+              <Link to="/" className="flex items-center">
                 <span className="text-2xl font-bold font-heading">IGNITE<span className="text-agency-orange">.</span></span>
-              </a>
+              </Link>
             </div>
             <p className="text-gray-300 mb-6">
               A full-service digital marketing agency helping businesses achieve exceptional growth online through strategic and data-driven solutions.
@@ -37,24 +37,24 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-6">Our Services</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Digital Strategy</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Search Engine Optimization</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Paid Advertising</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Social Media Management</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Content Creation</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Web Design & Development</a></li>
+              <li><Link to="/services#digital-strategy" className="text-gray-300 hover:text-white transition-colors">Digital Strategy</Link></li>
+              <li><Link to="/services#seo" className="text-gray-300 hover:text-white transition-colors">Search Engine Optimization</Link></li>
+              <li><Link to="/services#paid-advertising" className="text-gray-300 hover:text-white transition-colors">Paid Advertising</Link></li>
+              <li><Link to="/services#social-media" className="text-gray-300 hover:text-white transition-colors">Social Media Management</Link></li>
+              <li><Link to="/services#content-creation" className="text-gray-300 hover:text-white transition-colors">Content Creation</Link></li>
+              <li><Link to="/services#web-design" className="text-gray-300 hover:text-white transition-colors">Web Design & Development</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-bold mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              <li><a href="#home" className="text-gray-300 hover:text-white transition-colors">Home</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Services</a></li>
-              <li><a href="#portfolio" className="text-gray-300 hover:text-white transition-colors">Our Work</a></li>
-              <li><a href="#testimonials" className="text-gray-300 hover:text-white transition-colors">Testimonials</a></li>
-              <li><a href="#team" className="text-gray-300 hover:text-white transition-colors">Team</a></li>
-              <li><a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+              <li><Link to="/" className="text-gray-300 hover:text-white transition-colors">Home</Link></li>
+              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/portfolio" className="text-gray-300 hover:text-white transition-colors">Our Work</Link></li>
+              <li><Link to="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
+              <li><Link to="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -107,9 +107,9 @@ const Footer = () => {
               &copy; {currentYear} IGNITE Marketing Agency. All rights reserved.
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Sitemap</a>
+              <Link to="/privacy-policy" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</Link>
+              <Link to="/sitemap" className="text-gray-400 hover:text-white text-sm transition-colors">Sitemap</Link>
             </div>
           </div>
         </div>

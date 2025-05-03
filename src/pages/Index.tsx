@@ -5,7 +5,7 @@ import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
 import Team from "@/components/Team";
-import Contact from "@/components/Contact";
+import { Contact } from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 const Index = () => {

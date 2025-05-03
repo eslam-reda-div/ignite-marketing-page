@@ -1,10 +1,8 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+ 
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -12,68 +10,163 @@
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
-
+ 
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 221 73% 18%;
+ 
+    --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
-
+ 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
-
+ 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-
+ 
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
-
+ 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
-
+ 
     --radius: 0.5rem;
   }
-
+}
+ 
+@layer base {
   * {
     @apply border-border;
-    scroll-behavior: smooth;
   }
-
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-white text-gray-800 font-sans;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
+  /* Custom Colors */
+  :root {
+    --color-agency-blue: #1a4b8c;
+    --color-agency-blue-light: #2a6bc1;
+    --color-agency-orange: #ff6b35;
+    --color-agency-orange-light: #ff8a5e;
+    --color-agency-gray: #f7f8fb;
   }
 }
 
 @layer components {
+  /* Custom Container */
   .container-custom {
-    @apply container px-4 md:px-6 lg:px-8;
+    @apply container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl;
   }
 
+  /* Section Padding */
   .section-padding {
     @apply py-16 md:py-24;
   }
 
-  .heading-gradient {
-    @apply bg-gradient-to-r from-agency-blue to-agency-blueLight bg-clip-text text-transparent;
-  }
-
+  /* Button Styles */
   .btn-primary {
-    @apply bg-agency-blue hover:bg-agency-blueLight text-white px-6 py-3 rounded-md transition-all duration-300 font-medium;
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md bg-agency-blue text-white font-medium hover:bg-agency-blueLight transition-colors;
   }
 
   .btn-secondary {
-    @apply bg-agency-orange hover:bg-agency-orangeLight text-white px-6 py-3 rounded-md transition-all duration-300 font-medium;
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md bg-white text-agency-blue border border-agency-blue font-medium hover:bg-agency-blue hover:text-white transition-colors;
   }
 
+  .btn-primary-light {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md bg-agency-orange text-white font-medium hover:bg-agency-orangeLight transition-colors;
+  }
+
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md bg-transparent text-white border border-white font-medium hover:bg-white/10 transition-colors;
+  }
+
+  /* Card Hover Effect */
   .card-effect {
     @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
   }
+
+  /* Heading Gradient */
+  .heading-gradient {
+    @apply bg-gradient-to-r from-agency-blue to-agency-orange bg-clip-text text-transparent;
+  }
+
+  /* Animations */
+  .animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Tailwind Custom Colors */
+.text-agency-blue {
+  color: var(--color-agency-blue);
+}
+
+.bg-agency-blue {
+  background-color: var(--color-agency-blue);
+}
+
+.text-agency-blueLight {
+  color: var(--color-agency-blue-light);
+}
+
+.bg-agency-blueLight {
+  background-color: var(--color-agency-blue-light);
+}
+
+.text-agency-orange {
+  color: var(--color-agency-orange);
+}
+
+.bg-agency-orange {
+  background-color: var(--color-agency-orange);
+}
+
+.text-agency-orangeLight {
+  color: var(--color-agency-orange-light);
+}
+
+.bg-agency-orangeLight {
+  background-color: var(--color-agency-orange-light);
+}
+
+.bg-agency-gray {
+  background-color: var(--color-agency-gray);
+}
+
+/* Rich Text Content Styling */
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  color: var(--color-agency-blue);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.prose a {
+  color: var(--color-agency-blue);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-agency-blue);
+}
+
+.prose a:hover {
+  color: var(--color-agency-orange);
+  border-bottom-color: var(--color-agency-orange);
+}
+
+.prose ul, .prose ol {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
